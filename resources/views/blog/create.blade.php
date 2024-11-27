@@ -49,7 +49,7 @@
         <!-- Blog Image -->
         <div class="bg-gray-100 py-4 px-5 rounded-lg mb-5">
             <label class="block text-gray-600 font-semibold mb-2">
-                Upload an Image for Your Blog (optional)
+                Upload an Image for Your Blog 
             </label>
             <input 
                 type="file" 
@@ -60,7 +60,7 @@
         <!-- Submit Button -->
         <button 
             type="submit"
-            class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+            class="bg-black text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
             Publish Blog
         </button>
     </form>

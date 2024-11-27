@@ -36,7 +36,7 @@
             </p>
             <a 
                 href="/blog"
-                class="inline-block mt-6 bg-black text-white py-4 px-6 text-lg font-bold uppercase rounded hover:bg-blue-700 transition">
+                class="inline-block mt-6 bg-black text-white py-4 px-6 text-lg font-bold uppercase rounded hover:bg-gray-700 transition">
                 Learn More
             </a>
         </div>
@@ -101,7 +101,7 @@
         </p>
         <a 
             href="/blog"
-            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            class="uppercase bg-black text-white text-sm font-bold py-2 px-4 rounded hover:bg-gray-700 transition">
             Read More
         </a>
     </div>
@@ -119,7 +119,7 @@
         </p>
         <a 
             href="/blog"
-            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            class="uppercase bg-black text-white text-sm font-bold py-2 px-4 rounded hover:bg-gray-700 transition">
             Read More
         </a>
     </div>
@@ -137,7 +137,7 @@
         </p>
         <a 
             href="/blog"
-            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            class="uppercase bg-black text-white text-sm font-bold py-2 px-4 rounded hover:bg-gray-700 transition">
             Read More
         </a>
     </div>
