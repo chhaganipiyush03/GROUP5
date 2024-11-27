@@ -2,18 +2,21 @@
 
 @section('content')
 <div class="w-4/5 m-auto text-left">
-    <div class="py-15">
-        <h1 class="text-6xl">
-            Create Post
+    <div class="py-15 border-b border-gray-200">
+        <h1 class="text-6xl font-bold">
+            Write a New Blog Post
         </h1>
+        <p class="text-gray-600 mt-4">
+            Share your thoughts and ideas with the world.
+        </p>
     </div>
 </div>
- 
+
 @if ($errors->any())
-    <div class="w-4/5 m-auto">
+    <div class="w-4/5 m-auto mt-5">
         <ul>
             @foreach ($errors->all() as $error)
-                <li class="w-1/5 mb-4 text-gray-50 bg-red-700 rounded-2xl py-4">
+                <li class="w-full text-gray-50 bg-red-700 rounded-lg py-2 px-4 mb-2">
                     {{ $error }}
                 </li>
             @endforeach
@@ -21,42 +24,45 @@
     </div>
 @endif
 
-<div class="w-4/5 m-auto pt-20">
+<div class="w-4/5 m-auto pt-10">
     <form 
-        action="/blog"
-        method="POST"
+        action="/blog" 
+        method="POST" 
         enctype="multipart/form-data">
         @csrf
 
+        <!-- Blog Title -->
         <input 
-            type="text"
-            name="title"
-            placeholder="Title..."
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+            type="text" 
+            name="title" 
+            placeholder="Enter Blog Title"
+            class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 text-lg mb-5"
+            required>
 
+        <!-- Blog Description -->
         <textarea 
-            name="description"
-            placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+            name="description" 
+            placeholder="Write your blog content here..."
+            class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 text-lg h-64 mb-5"
+            required></textarea>
 
-        <div class="bg-grey-lighter pt-15">
-            <label class="w-44 flex flex-col items-center px-2 py-3 bg-white-rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer">
-                <span class="mt-2 text-base leading-normal">
-                    Select a file
-                </span>
-                <input 
-                    type="file"
-                    name="image"
-                    class="hidden">
+        <!-- Blog Image -->
+        <div class="bg-gray-100 py-4 px-5 rounded-lg mb-5">
+            <label class="block text-gray-600 font-semibold mb-2">
+                Upload an Image for Your Blog (optional)
             </label>
+            <input 
+                type="file" 
+                name="image" 
+                class="text-gray-600">
         </div>
 
-        <button    
+        <!-- Submit Button -->
+        <button 
             type="submit"
-            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
-            Submit Post
+            class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+            Publish Blog
         </button>
     </form>
 </div>
-
 @endsection

@@ -1,100 +1,142 @@
 @extends('layouts.app')
 
 @section('content')
+    <!-- Hero Section -->
     <div class="background-image grid grid-cols-1 m-auto">
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-10 leading-tight">
+                    Welcome to Our Blog!
                 </h1>
+                <p class="text-gray-200 text-lg leading-relaxed pb-8">
+                    Explore ideas, stories, and insights that inspire and inform. Join us in sharing knowledge and creativity.
+                </p>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    Read More
+                    class="text-center bg-gray-50 text-gray-700 py-3 px-6 font-bold text-lg uppercase rounded hover:bg-gray-200 transition">
+                    Explore Blogs
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+    <!-- About the Blog -->
+    <div class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-16 border-b border-gray-200">
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
+            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                alt="About Blogging" 
+                class="rounded-lg shadow-lg">
         </div>
-
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
+        <div class="flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-gray-800 leading-tight pb-6">
+                What's in Our Blog?
             </h2>
-            
-            <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Dive into topics ranging from tech to lifestyle, health, and productivity. Whether you're a curious reader or a knowledge seeker, there's something for everyone here.
             </p>
-
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
-
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
+                class="inline-block mt-6 bg-blue-600 text-white py-3 px-6 text-lg font-bold uppercase rounded hover:bg-blue-700 transition">
+                Learn More
             </a>
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
-        <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
-        </h2>
-
-        <span class="font-extrabold block text-4xl py-1">
-            Ux Design
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Project Management
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Backend Development
-        </span>
+    <!-- Featured Blog Post -->
+    <div class="bg-gray-100 py-16">
+        <div class="w-4/5 m-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 pb-10">
+                Featured Post
+            </h2>
+            <div class="sm:grid grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                        alt="Featured Post Image" 
+                        class="rounded-lg shadow-lg">
+                </div>
+                <div class="flex flex-col justify-center bg-blue-600 text-gray-100 p-10 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold pb-6 leading-tight">
+                        The Art of Writing: Tips for Beginners
+                    </h3>
+                    <p class="text-sm font-light pb-4">
+                        By <span class="font-semibold">Kanak Agrawal</span>, Created on <span class="italic">27th Nov 2024</span>
+                    </p>
+                    <p class="text-gray-200 text-lg leading-relaxed pb-6">
+                        Discover how to craft compelling stories and articles with practical tips for aspiring writers and content creators.
+                    </p>
+                    <a 
+                        href="/blog"
+                        class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-sm font-extrabold py-3 px-5 rounded-3xl hover:bg-gray-100 hover:text-blue-600 transition">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
+    <!-- Recent Blog Posts -->
+    <div class="text-center py-16">
+        <span class="uppercase text-sm text-gray-400 tracking-wide">
             Blog
         </span>
-
-        <h2 class="text-4xl font-bold py-10">
+        <h2 class="text-4xl font-bold py-6 text-gray-800">
             Recent Posts
         </h2>
-
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
+        <p class="m-auto w-4/5 text-gray-500 text-lg">
+            Discover a range of topics from our latest posts.
         </p>
     </div>
 
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
-
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
-                <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
-            </div>
+    <div class="sm:grid grid-cols-3 gap-10 w-4/5 m-auto py-10">
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 pb-4">
+                Productivity Hacks for 2024
+            </h3>
+            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                alt="Post 1" 
+                class="rounded-lg shadow-lg pb-4">
+            <p class="text-gray-600 text-sm pb-4">
+                Boost your productivity with these proven strategies for staying organized and efficient in 2024.
+            </p>
+            <a 
+                href="/blog"
+                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+                Read More
+            </a>
         </div>
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
+
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 pb-4">
+                Healthy Living in a Digital World
+            </h3>
+            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                alt="Post 2" 
+                class="rounded-lg shadow-lg pb-4">
+            <p class="text-gray-600 text-sm pb-4">
+                Learn how to maintain a healthy lifestyle while balancing work and technology in today's fast-paced world.
+            </p>
+            <a 
+                href="/blog"
+                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+                Read More
+            </a>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 pb-4">
+                Exploring Minimalist Living
+            </h3>
+            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                alt="Post 3" 
+                class="rounded-lg shadow-lg pb-4">
+            <p class="text-gray-600 text-sm pb-4">
+                Minimalism is more than a trend. Discover how simplifying your life can lead to greater clarity and happiness.
+            </p>
+            <a 
+                href="/blog"
+                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+                Read More
+            </a>
         </div>
     </div>
 @endsection
