@@ -6,10 +6,10 @@
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-10 leading-tight">
-                    Welcome to Our Blog!
+                    Welcome to the Blog!
                 </h1>
-                <p class="text-gray-200 text-lg leading-relaxed pb-8">
-                    Explore ideas, stories, and insights that inspire and inform. Join us in sharing knowledge and creativity.
+                <p class="text-gray-200 text-lg leading-relaxed pb-15">
+                    Your Gateway to the Latest in Tech Insights and Innovations
                 </p>
                 <a 
                     href="/blog"
@@ -23,7 +23,7 @@
     <!-- About the Blog -->
     <div class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-16 border-b border-gray-200">
         <div>
-            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+            <img src="{{ asset('images/download.jpg') }}" 
                 alt="About Blogging" 
                 class="rounded-lg shadow-lg">
         </div>
@@ -36,21 +36,21 @@
             </p>
             <a 
                 href="/blog"
-                class="inline-block mt-6 bg-blue-600 text-white py-3 px-6 text-lg font-bold uppercase rounded hover:bg-blue-700 transition">
+                class="inline-block mt-6 bg-black text-white py-4 px-6 text-lg font-bold uppercase rounded hover:bg-blue-700 transition">
                 Learn More
             </a>
         </div>
     </div>
 
     <!-- Featured Blog Post -->
-    <div class="bg-gray-100 py-16">
+    <div class="bg-gray-200 py-16">
         <div class="w-4/5 m-auto">
             <h2 class="text-4xl font-bold text-center text-gray-800 pb-10">
                 Featured Post
             </h2>
             <div class="sm:grid grid-cols-2 gap-10 items-center">
                 <div>
-                    <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
+                    <img src="{{ asset('images/write.jpg') }}" 
                         alt="Featured Post Image" 
                         class="rounded-lg shadow-lg">
                 </div>
@@ -88,55 +88,59 @@
     </div>
 
     <div class="sm:grid grid-cols-3 gap-10 w-4/5 m-auto py-10">
-        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold text-gray-800 pb-4">
-                Productivity Hacks for 2024
-            </h3>
-            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
-                alt="Post 1" 
-                class="rounded-lg shadow-lg pb-4">
-            <p class="text-gray-600 text-sm pb-4">
-                Boost your productivity with these proven strategies for staying organized and efficient in 2024.
-            </p>
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
-                Read More
-            </a>
-        </div>
-
-        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold text-gray-800 pb-4">
-                Healthy Living in a Digital World
-            </h3>
-            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
-                alt="Post 2" 
-                class="rounded-lg shadow-lg pb-4">
-            <p class="text-gray-600 text-sm pb-4">
-                Learn how to maintain a healthy lifestyle while balancing work and technology in today's fast-paced world.
-            </p>
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
-                Read More
-            </a>
-        </div>
-
-        <div class="bg-gray-100 rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold text-gray-800 pb-4">
-                Exploring Minimalist Living
-            </h3>
-            <img src="https://drive.google.com/uc?id=YOUR_FILE_ID" 
-                alt="Post 3" 
-                class="rounded-lg shadow-lg pb-4">
-            <p class="text-gray-600 text-sm pb-4">
-                Minimalism is more than a trend. Discover how simplifying your life can lead to greater clarity and happiness.
-            </p>
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
-                Read More
-            </a>
-        </div>
+    <!-- First Post -->
+    <div class="bg-gray-100 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <h3 class="text-xl font-bold text-gray-800 pb-4">
+            Productivity Hacks for 2024
+        </h3>
+        <img src="{{ asset('images/hack.jpg') }}" 
+            alt="Post 1" 
+            class="rounded-lg shadow-lg mb-4 w-full max-w-[250px] mx-auto">
+        <p class="text-gray-600 text-sm pb-4">
+            Boost your productivity with these proven strategies for staying organized and efficient in 2024.
+        </p>
+        <a 
+            href="/blog"
+            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            Read More
+        </a>
     </div>
+
+    <!-- Second Post -->
+    <div class="bg-gray-100 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <h3 class="text-xl font-bold text-gray-800 pb-4">
+            Healthy Living in a Digital World
+        </h3>
+        <img src="{{ asset('images/health.jpg') }}" 
+            alt="Post 2" 
+            class="rounded-lg shadow-lg mb-4 w-full max-w-[250px] mx-auto">
+        <p class="text-gray-600 text-sm pb-4">
+            Learn how to maintain a healthy lifestyle while balancing work and technology in today's fast-paced world.
+        </p>
+        <a 
+            href="/blog"
+            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            Read More
+        </a>
+    </div>
+
+    <!-- Third Post -->
+    <div class="bg-gray-100 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <h3 class="text-xl font-bold text-gray-800 pb-4">
+            Exploring Minimalist Living
+        </h3>
+        <img src="{{ asset('images/live.jpg') }}" 
+            alt="Post 3" 
+            class="rounded-lg shadow-lg mb-4 w-full max-w-[250px] mx-auto">
+        <p class="text-gray-600 text-sm pb-4">
+            Minimalism is more than a trend. Discover how simplifying your life can lead to greater clarity and happiness.
+        </p>
+        <a 
+            href="/blog"
+            class="uppercase bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
+            Read More
+        </a>
+    </div>
+</div>
+
 @endsection
