@@ -1,68 +1,92 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <!-- Favicon link -->
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-</head>
+@extends('layouts.app')
 
-<body>
-    <!-- Horizontal Navigation Bar -->
-    <header>
-        <div class="logo-container">
-            <img src="images\logo.png" alt="Logo" class="logo">
-            <span class="website-name">BlogSite</span>
+@section('content')
+<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
+    <div class="flex">
+        <div class="w-full">
+            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+
+                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+                    {{ __('Register') }}
+                </header>
+
+                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST"
+                    action="{{ route('register') }}">
+                    @csrf
+
+                    <div class="flex flex-wrap">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('Name') }}:
+                        </label>
+
+                        <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
+                            name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                        @error('name')
+                        <p class="text-red-500 text-xs italic mt-4">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+                    <div class="flex flex-wrap">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('E-Mail Address') }}:
+                        </label>
+
+                        <input id="email" type="email"
+                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
+                            value="{{ old('email') }}" required autocomplete="email">
+
+                        @error('email')
+                        <p class="text-red-500 text-xs italic mt-4">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+                    <div class="flex flex-wrap">
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('Password') }}:
+                        </label>
+
+                        <input id="password" type="password"
+                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
+                            required autocomplete="new-password">
+
+                        @error('password')
+                        <p class="text-red-500 text-xs italic mt-4">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+                    <div class="flex flex-wrap">
+                        <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('Confirm Password') }}:
+                        </label>
+
+                        <input id="password-confirm" type="password" class="form-input w-full"
+                            name="password_confirmation" required autocomplete="new-password">
+                    </div>
+
+                    <div class="flex flex-wrap">
+                        <button type="submit"
+                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            {{ __('Register') }}
+                        </button>
+
+                        <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
+                            {{ __('Already have an account?') }}
+                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('login') }}">
+                                {{ __('Login') }}
+                            </a>
+                        </p>
+                    </div>
+                </form>
+
+            </section>
         </div>
-        <button class="theme-toggle">Switch to Dark Mode</button>
-    </header>
-
-    <!-- Registration Form -->
-    <main>
-        <h1 class="register-title">Sign Up</h1> <!-- Centered title -->
-        <div class="register-box">
-            <form action="{{ route('register.submit') }}" method="POST">
-                @csrf
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="password_confirmation">Confirm Password:</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" required>
-
-                <button type="submit">Register</button>
-            </form>
-            <p>Already have an account? <a href="{{ route('login') }}">Login here</a></p>
-        </div>
-    </main>
-
-    <script src="{{ asset('js/theme.js') }}"></script>
-    
-</body>
-
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Nature Chronicles. All Rights Reserved. | Designed by GreenTech Studios | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
     </div>
-    <div class="social-media">
-        <a href="https://www.facebook.com/naturechronicles" target="_blank">
-            <img src="facebook-icon.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com/naturechronicles" target="_blank">
-            <img src="twitter-icon.png" alt="Twitter">
-        </a>
-        <a href="https://www.instagram.com/naturechronicles" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/company/naturechronicles" target="_blank">
-            <img src="linkedin-icon.png" alt="LinkedIn">
-        </a>
-    </div>
-</footer>
-
-</html>
+</main>
+@endsection
