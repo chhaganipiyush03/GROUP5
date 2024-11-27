@@ -14,3 +14,10 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
+
+
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+
+use App\Http\Controllers\LoginController;
+
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
